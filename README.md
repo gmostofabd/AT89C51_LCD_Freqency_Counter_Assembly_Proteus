@@ -10,14 +10,14 @@ A Frequency Counter using the **8051 MCU (AT89C51)** and **Assembly Language Pro
 
 ## 📖 **Overview**
 
-This project demonstrates a **Frequency Counter** using the **[AT89C51](https://www.atmel.com/products/microcontrollers/8051.aspx)** Microcontroller, part of the **[8051 MCU](https://en.wikipedia.org/wiki/Intel_MCS-51)** family. The frequency measurement is displayed on a **LCD** and controlled via external components.
+This project demonstrates a **Frequency Counter** using the **[AT89C51](https://www.atmel.com/products/microcontrollers/8051.aspx)** Microcontroller, part of the **[8051 MCU](https://en.wikipedia.org/wiki/Intel_MCS-51)** family. The frequency measurement is displayed on an **LCD** and controlled via external components, making it an excellent tool for various applications in electronics and communications.
 
-The program is written in **[Assembly language](https://en.wikipedia.org/wiki/Assembly_language)**, and the circuit is simulated using **[Proteus](https://www.labcenter.com/)** (Version 8.9). This repository includes:
-- **[Assembly Code](https://en.wikipedia.org/wiki/Assembly_language)**
-- **Precompiled HEX File**
-- **[Proteus Simulation Circuit](https://www.labcenter.com/)**
+The program is written in **[Assembly language](https://en.wikipedia.org/wiki/Assembly_language)**, optimized for efficiency and speed, and the circuit is simulated using **[Proteus](https://www.labcenter.com/)** (Version 8.9). This repository includes:
+- **[Assembly Code](https://en.wikipedia.org/wiki/Assembly_language)** for the frequency counting algorithm
+- **Precompiled HEX File** for easy microcontroller programming
+- **[Proteus Simulation Circuit](https://www.labcenter.com/)** demonstrating the project functionality
 
-The project has been successfully tested on both simulation and real hardware.
+The project has been successfully tested on both simulation and real hardware setups, ensuring reliability and accuracy.
 
 ---
 
@@ -39,11 +39,11 @@ The project has been successfully tested on both simulation and real hardware.
 
 | Feature                      | Description                                                                 |
 |-------------------------------|-----------------------------------------------------------------------------|
-| 📏 **Frequency Measurement**    | Measures frequency and displays it on an LCD                                |
-| 🎛️ **Control Interface**       | Controlled via external components                                           |
-| 🖥️ **Proteus Simulation**      | Ready-to-use simulation circuit (Proteus 8.9 compatible)                    |
-| 💾 **Assembly Programming**    | Written entirely in **Assembly language** for the AT89C51                   |
-| 🛠️ **Real Hardware Support**   | Successfully tested on physical hardware                                     |
+| 📏 **Frequency Measurement**    | Accurately measures frequency and displays it on a high-contrast LCD        |
+| 🎛️ **Control Interface**       | User-friendly interface controlled via external push buttons                |
+| 🖥️ **Proteus Simulation**      | Ready-to-use simulation circuit compatible with Proteus 8.9                |
+| 💾 **Assembly Programming**    | Optimized assembly code for efficient execution on the AT89C51              |
+| 🛠️ **Real Hardware Support**   | Successfully tested on actual hardware for reliable performance              |
 
 </div>
 
@@ -58,7 +58,7 @@ The project has been successfully tested on both simulation and real hardware.
 | `AT89C51_Frequency_Counter.asm`  | Assembly source code for the AT89C51 microcontroller                        |
 | `AT89C51_Frequency_Counter.hex`  | Precompiled HEX file for direct microcontroller upload                      |
 | `Proteus_Simulation.pdsprj`    | Proteus Design Suite simulation file                                        |
-| **Screenshots**                | Demonstrations from the Proteus simulation                                  |
+| **Screenshots**                | Visual demonstrations from the Proteus simulation                          |
 
 </div>
 
@@ -70,23 +70,22 @@ The project has been successfully tested on both simulation and real hardware.
 
 | Hardware Component             | Description                                                                 |
 |---------------------------------|-----------------------------------------------------------------------------|
-| **AT89C51 Microcontroller**     | Core of the project, controlling the frequency measurement                   |
-| **LCD**                         | Display for showing the measured frequency                                   |
-| **Push Buttons**                | Used for controlling various functions                                       |
-| **Transistors (e.g., NPN)**     | To drive the LCD and other components                                        |
-| **Resistors**                   | For current-limiting to protect the microcontroller and LCD                  |
-| **Power Supply**                | A 5V DC power supply for the microcontroller and LCD circuit                |
+| **AT89C51 Microcontroller**     | Central unit managing frequency measurement and display                     |
+| **LCD**                         | 16x2 LCD for visual output of the frequency value                          |
+| **Push Buttons**                | Controls for starting/stopping measurement and resetting the display        |
+| **Transistors (e.g., NPN)**     | Used to interface the microcontroller with the LCD and other components     |
+| **Resistors**                   | Current-limiting resistors to protect components from overcurrent          |
+| **Power Supply**                | A 5V DC power supply for the microcontroller and LCD circuit               |
 
 </div>
 
 ---
----
 
 ### **Circuit Explanation**:
 
-The **LCD** in this project displays the measured frequency, with the microcontroller processing input signals to calculate frequency values.
+The **LCD** in this project displays the measured frequency, with the microcontroller processing input signals from an external source to calculate frequency values. The LCD provides a clear readout, making it easy to monitor frequency in real time.
 
-Each control component, such as push buttons, is connected to input pins on the microcontroller. Resistors ensure proper current control to prevent damage to the microcontroller and display.
+Each control component, such as push buttons, is connected to input pins on the microcontroller. Resistors are used throughout the circuit to ensure proper current control, preventing damage to the microcontroller and display.
 
 ---
 
@@ -96,53 +95,51 @@ Each control component, such as push buttons, is connected to input pins on the 
 
 1. **Clone this repository**:
    ```bash
-   git clone https://github.com/gmostofabd/8051_Up_Down_Counter_SSD.git
+   git clone https://github.com/gmostofabd/AT89C51_LCD_Frequency_Counter.git
    ```
 
 2. **Compile the Assembly Code**:
-   Open the `AT89C51_Up_Down_Counter.asm` file in **MIDE-51** or a compatible IDE, and compile it to generate the **HEX file**.
+   Open the `AT89C51_Frequency_Counter.asm` file in **MIDE-51** or any compatible IDE, and compile it to generate the **HEX file**.
 
 3. **Simulate in Proteus**:
-   Open **Proteus Design Suite**, load the provided simulation file, and run the simulation to observe the counter’s behavior.
+   Open **Proteus Design Suite**, load the provided simulation file, and run the simulation to observe the frequency measurement.
 
 4. **Program the Microcontroller**:
-   For real hardware, upload the **HEX file** to the AT89C51 microcontroller using a programmer.
+   For real hardware applications, upload the **HEX file** to the AT89C51 microcontroller using a compatible programmer.
 
 5. **Test the Circuit**:
-   Assemble the hardware based on the provided circuit diagram, power it on, and test the push buttons for incrementing, decrementing, and resetting the counter.
+   Assemble the hardware according to the provided circuit diagram, power it on, and verify the functionality by pressing the control buttons.
 
 ---
 
 ## 🔗 **Additional Information**
 
-### **Seven-Segment Display**:
-The **common cathode** display has 8 LEDs (7 segments and 1 decimal point) to represent digits 0-9. The microcontroller drives the LEDs through combinations of HIGH/LOW signals.
+### **LCD Display**:
+The **16x2 LCD** displays the frequency value measured by the microcontroller. The data is updated in real time, providing immediate feedback on the measurement process.
 
-### **Push Button Controls**:
-- **Increment Button**: Increases the counter by 1.
-- **Decrement Button**: Decreases the counter by 1.
-- **Reset Button**: Resets the counter to 0.
+### **Push Button Functionality**:
+- **Start/Stop Button**: Begins or halts the frequency measurement.
+- **Reset Button**: Resets the measured frequency value to zero.
 
-For a deeper understanding of the circuit and code, explore the **Proteus simulation** and the comments in the assembly source file.
+For a deeper understanding of the circuit and code, explore the **Proteus simulation** and review comments within the assembly source file for explanations of specific code sections.
 
 ---
 
 ## 🤝 **Contributing**
 
-We welcome contributions! Feel free to submit pull requests or open issues for any bug fixes, feature enhancements, or optimizations to the assembly code.
+We welcome contributions! If you have suggestions for improvements or additional features, feel free to submit pull requests or open issues regarding any bug fixes, feature enhancements, or optimizations to the assembly code.
 
 ---
 
 ## 📧 **Contact**
 
-For any inquiries or assistance, reach out at [mostofa.melab@gmail.com](mailto:mostofa.melab@gmail.com).
+For any inquiries, feedback, or assistance, please reach out at [mostofa.melab@gmail.com](mailto:mostofa.melab@gmail.com).
 
 ---
-
-
 
 <p align="center">
   <img src="your-contact-graphic.png" alt="Contact Graphic" width="50%">
 </p>
 
-If you found this project helpful, give it a ⭐ on GitHub!
+If you found this project helpful, please give it a ⭐ on GitHub!
+```
